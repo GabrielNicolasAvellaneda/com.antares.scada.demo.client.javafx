@@ -9,6 +9,16 @@
   <url>http://maven.apache.org</url>
   
  <repositories>
+ <repository>
+		<id>jfxtras-labs</id>
+		<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+	</repository>
 	<repository>
 		<id>eclipse.scada</id>
 		<url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/maven/</url>
@@ -56,7 +66,7 @@
     <dependency>
       <groupId>org.jfxtras</groupId>
       <artifactId>jfxtras-labs</artifactId>
-      <version>2.2-r5</version>
+      <version>8.0-r4-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
