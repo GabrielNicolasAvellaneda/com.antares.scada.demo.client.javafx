@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.client.ngp/0.2.0/org.eclipse.scada.da.client.ngp-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.client/0.1.0/org.eclipse.scada.core.client-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.core/0.1.0/org.eclipse.scada.core-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/utils/org.eclipse.scada.utils/0.2.0/org.eclipse.scada.utils-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/15.0/guava-15.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.sec/0.1.0/org.eclipse.scada.sec-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.sec.utils/0.1.0/org.eclipse.scada.sec.utils-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.client/0.1.0/org.eclipse.scada.da.client-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.data/0.1.0/org.eclipse.scada.core.data-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.core.common/0.2.0/org.eclipse.scada.da.core.common-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.data/0.1.0/org.eclipse.scada.da.data-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.subscription/0.1.0/org.eclipse.scada.core.subscription-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.common.ngp/0.1.0/org.eclipse.scada.da.common.ngp-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/protocols/org.eclipse.scada.protocol.ngp.common/0.2.0/org.eclipse.scada.protocol.ngp.common-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/protocols/org.eclipse.scada.protocol.common/0.2.0/org.eclipse.scada.protocol.common-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/utils/org.eclipse.scada.utils.stats/0.1.0/org.eclipse.scada.utils.stats-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/mina/mina-core/2.0.7/mina-core-2.0.7.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/mina/mina-filter-compression/2.0.7/mina-filter-compression-2.0.7.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/jcraft/jzlib/1.1.1/jzlib-1.1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.ngp.common/0.2.0/org.eclipse.scada.core.ngp.common-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.protocol.ngp.codec/0.2.0/org.eclipse.scada.da.protocol.ngp.codec-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.protocol.ngp.codec/0.2.0/org.eclipse.scada.core.protocol.ngp.codec-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/osgi/org.osgi.core/4.2.0/org.osgi.core-4.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.client.ngp/0.2.0/org.eclipse.scada.core.client.ngp-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.client.common/0.2.0/org.eclipse.scada.core.client.common-0.2.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.ngp/0.1.0/org.eclipse.scada.core.ngp-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-labs/2.2-r5/jfxtras-labs-2.2-r5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
