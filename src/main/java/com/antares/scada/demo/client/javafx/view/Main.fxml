@@ -15,7 +15,7 @@
 <?import com.antares.scada.demo.client.javafx.GaugeControl?>
 <?import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml">
+<StackPane xmlns:fx="http://javafx.com/fxml">
 
 <stylesheets>
 <URL value="@../styles.css"/>
@@ -30,12 +30,10 @@
 	</Connection>
 </fx:define>
 
-<top>
-	<Text text="JavaFX Gauge Control" styleClass="title"/>
-</top>
+<Text text="JavaFX Gauge Control" styleClass="title"/>
 
-<center>
-	<GaugeControl input="${item1.state}" />
-</center>
+<GaugeControl input="${item1.state}">
+	<SimpleMetroArcGauge />
+</GaugeControl>
 
-</BorderPane>
+</StackPane>

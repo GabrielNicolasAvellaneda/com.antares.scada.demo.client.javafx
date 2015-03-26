@@ -7,13 +7,14 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Control;
 import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge;
 
+import org.eclipse.scada.core.Variant;
 import org.eclipse.scada.da.client.DataItemValue;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
-public class GaugeControl extends SimpleMetroArcGauge
+public class GaugeControl extends StackPane
 {
     private final ObjectProperty<DataItemValue> input = new SimpleObjectProperty<> ();
-    
-    private final SimpleMetroArcGauge gauge = new SimpleMetroArcGauge();
     
     private static final String DEFAULT_STYLE_CLASS = "openscada-gauge-control";
 
@@ -53,8 +54,16 @@ public class GaugeControl extends SimpleMetroArcGauge
                 this.gauge.setGlowColor ( Color.TURQUOISE );
                 this.gauge.setGlowOn ( true );
             }*/
-        	System.out.println(newValue.getValue().asDouble());
-            this.setValue ( newValue.getValue ().asDouble () );
+        	SimpleMetroArcGauge gauge = (SimpleMetroArcGauge)this.getChildren().get(0);
+        	if (gauge != null) {
+        		if (newValue != null) {
+	            	final Variant value = newValue.getValue ();
+	            	if (!value.isNull()) {
+	            		gauge.setValue (value.asDouble ());		
+	            	}
+	            }
+        	}
+
         }
         catch ( final Exception e )
         {
