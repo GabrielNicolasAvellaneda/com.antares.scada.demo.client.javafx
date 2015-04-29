@@ -4,28 +4,25 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge;
 
 import org.eclipse.scada.core.Variant;
 import org.eclipse.scada.da.client.DataItemValue;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.Button;
 
-public class GaugeControl extends StackPane
+public class ScadaButton extends Button
 {
-    private final ObjectProperty<DataItemValue> input = new SimpleObjectProperty<> ();
+    private final ObjectProperty<Item> input = new SimpleObjectProperty<> ();
     
-    private static final String DEFAULT_STYLE_CLASS = "openscada-gauge-control";
-
-    public GaugeControl() {
+    public ScadaButton() {
     	super();
     	
-    	inputProperty().addListener ( new ChangeListener<DataItemValue> () {
+    	/*inputProperty().addListener ( new ChangeListener<DataItemValue> () {
 
             @Override
             public void changed ( final ObservableValue<? extends DataItemValue> observable, final DataItemValue oldValue, final DataItemValue newValue )
             {
                 updateState ( newValue );
-            }});
+            }});*/
     }
     	
 	protected void updateState ( final DataItemValue newValue )
@@ -52,15 +49,6 @@ public class GaugeControl extends StackPane
                 this.gauge.setGlowColor ( Color.TURQUOISE );
                 this.gauge.setGlowOn ( true );
             }*/
-        	SimpleMetroArcGauge gauge = (SimpleMetroArcGauge)this.getChildren().get(0);
-        	if (gauge != null) {
-        		if (newValue != null) {
-	            	final Variant value = newValue.getValue ();
-	            	if (!value.isNull()) {
-	            		gauge.setValue (value.asDouble ());		
-	            	}
-	            }
-        	}
 
         }
         catch ( final Exception e )
@@ -69,17 +57,22 @@ public class GaugeControl extends StackPane
         }
     }
     
-    public DataItemValue getInput ()
+    public Item getInput ()
     {
         return this.input.get ();
     }
 
-    public void setInput ( final DataItemValue input )
+    public void setInput ( final Item input )
     {
         this.input.set ( input );
     }
+    
+    public void write(Variant value) {
+    	Item item = this.inputProperty().getValue();
+    	item.write(value);
+    }
 
-    public ObjectProperty<DataItemValue> inputProperty ()
+    public ObjectProperty<Item> inputProperty ()
     {
         return this.input;
     }

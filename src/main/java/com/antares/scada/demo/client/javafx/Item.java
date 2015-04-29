@@ -119,7 +119,7 @@ public class Item
         final String id = this.id.get ();
         if ( this.connection != null && id != null )
         {
-
+        	this.connection.startWrite(id, value, null, null);
         }
     }
 
