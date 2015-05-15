@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.antares.scada.demo.client.javafx.ui.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaButton?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaControlState?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaLabel?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaTextField?>
+
+<VBox fx:id="root" prefHeight="208.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.antares.scada.demo.client.javafx.Window2Controller">
+	<children>
+      <VBox prefHeight="146.0" prefWidth="327.0">
+		         <children>
+			
+			<ScadaTextField fx:id="testField" type="integer" />
+     		<ScadaButton inputSourceValue="${testField.value}" layoutX="30.0" layoutY="27.0" outputLensId="DEMO.INT_VAR1.X" prefHeight="25.0" prefWidth="112.0" switchInputId="DEMO.INT_VAR1.X" text="liga">
+				<states>
+					<ScadaControlState name="estado 0" value="0">
+						<properties>
+							<FXCollections fx:factory="observableHashMap">
+								<text>Estado 0</text>
+							</FXCollections>
+						</properties>
+					</ScadaControlState>
+					<ScadaControlState name="estado 0" value="1">
+						<properties>
+							<FXCollections fx:factory="observableHashMap">
+								<text>Estado 1</text>
+							</FXCollections>
+						</properties>
+					</ScadaControlState>
+
+				</states>
+			</ScadaButton>
+			<ScadaLabel outputLensId="DEMO.INT_VAR1.X" prefHeight="17.0" prefWidth="209.0" text="Test" />
+      		<ScadaButton inputSourceValue="${controller.booleanFalse}" layoutX="30.0" layoutY="73.0" outputLensId="DEMO.INT_VAR1.X" prefHeight="25.0" prefWidth="112.0" switchInputId="DEMO.INT_VAR1.X" text="desliga">
+				<states>
+					<ScadaControlState name="estado 1" value="1">
+						<properties>
+							<FXCollections fx:factory="observableHashMap">
+								<styleClass>customstate</styleClass>
+							</FXCollections>
+						</properties>
+					</ScadaControlState>
+				</states>
+			</ScadaButton>
+
+         </children>
+      </VBox>
+	</children>
+
+</VBox>

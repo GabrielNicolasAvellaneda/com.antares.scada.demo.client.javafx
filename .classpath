@@ -5,7 +5,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_25"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.client.ngp/0.2.0/org.eclipse.scada.da.client.ngp-0.2.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.client/0.1.0/org.eclipse.scada.core.client-0.1.0.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.core/0.1.0/org.eclipse.scada.core-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.core/0.1.0/org.eclipse.scada.core-0.1.0.jar" sourcepath="/ECLIPSE_HOME/plugins/org.eclipse.scada.core.source_0.1.0.v20140527-1240.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/utils/org.eclipse.scada.utils/0.2.0/org.eclipse.scada.utils-0.2.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/15.0/guava-15.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar"/>
@@ -13,7 +13,7 @@
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.sec/0.1.0/org.eclipse.scada.sec-0.1.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/base/org.eclipse.scada.sec.utils/0.1.0/org.eclipse.scada.sec.utils-0.1.0.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.client/0.1.0/org.eclipse.scada.da.client-0.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.client/0.1.0/org.eclipse.scada.da.client-0.1.0.jar" sourcepath="/ECLIPSE_HOME/plugins/org.eclipse.scada.da.client.source_0.1.0.v20141014-1337.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.data/0.1.0/org.eclipse.scada.core.data-0.1.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.core.common/0.2.0/org.eclipse.scada.da.core.common-0.2.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.da.data/0.1.0/org.eclipse.scada.da.data-0.1.0.jar"/>

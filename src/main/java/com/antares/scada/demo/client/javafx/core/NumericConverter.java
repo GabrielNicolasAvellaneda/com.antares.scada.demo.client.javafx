@@ -1,4 +1,4 @@
-package com.antares.scada.demo.client.javafx;
+package com.antares.scada.demo.client.javafx.core;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;

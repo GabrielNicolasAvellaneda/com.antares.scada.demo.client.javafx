@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import jfxtras.labs.scene.control.gauge.linear.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane gridLinesVisible="true" layoutX="26.0" layoutY="66.0" prefHeight="107.0" prefWidth="221.0" styleClass="grid-pane">
+         <children>
+            <Label alignment="CENTER" prefHeight="74.0" prefWidth="312.0" text="LAVAGEM" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="65.0" prefWidth="146.0" styleClass="label-grid" text="   Lavagem em Automático" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="67.0" prefWidth="208.0" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="296.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints maxHeight="173.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane gridLinesVisible="true" layoutX="330.0" layoutY="66.0" prefHeight="257.0" prefWidth="296.0" styleClass="grid-pane">
+         <children>
+            <Label alignment="CENTER" prefHeight="74.0" prefWidth="312.0" text="VEL. LINHA   (Mpm)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <SimpleMetroArcGauge prefHeight="181.0" prefWidth="315.0" value="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <TextField alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="230.0" text="12345" />
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="64.0" text="Set" />
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="998.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="1008.0" text="OPERAÇÃO DA LINHA" />
+         </children>
+      </GridPane>
+      <GridPane gridLinesVisible="true" layoutX="700.0" layoutY="76.0" prefHeight="149.0" prefWidth="271.0" styleClass="grid-pane">
+         <children>
+            <Label alignment="CENTER" prefHeight="74.0" prefWidth="312.0" text="Lamina (%)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <HBox prefHeight="50.0" prefWidth="296.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <TextField alignment="CENTER" editable="false" prefHeight="53.0" prefWidth="205.0" text="50" />
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="64.0" text="Set" />
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </HBox>
+            <GridPane gridLinesVisible="true" prefHeight="48.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="49.0" prefWidth="133.0" selected="true" text="LIGADO  ">
+                     <styleClass>
+                        <String fx:value="toggle-button-s1" />
+                        <String fx:value="toggle-button-s1" />
+                        <String fx:value="toggle-button-s1" />
+                        <String fx:value="toggle-button-s2" />
+                     </styleClass>
+                  </ToggleButton>
+                  <ToggleButton mnemonicParsing="false" prefHeight="50.0" prefWidth="133.0" styleClass="toggle-button-s2" text="DESLIGADO " GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</Pane>

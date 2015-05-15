@@ -1,4 +1,4 @@
-package com.antares.scada.demo.client.javafx;
+package com.antares.scada.demo.client.javafx.core;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -17,11 +17,15 @@ import org.eclipse.scada.da.client.DataItem;
 import org.eclipse.scada.da.client.DataItemValue;
 import org.eclipse.scada.da.client.ItemManager;
 
-public class Item
+import com.antares.scada.demo.client.javafx.interfaces.IDataItem;
+import com.antares.scada.demo.client.javafx.interfaces.IDataItemValue;
+import com.antares.scada.demo.client.javafx.interfaces.IVariant;
+
+public class Item implements IDataItem
 {
     private final StringProperty id = new SimpleStringProperty ( this, "id" );
 
-    private final ObjectProperty<DataItemValue> state = new SimpleObjectProperty<> ( this, "state" );
+    private final ObjectProperty<IDataItemValue> state = new SimpleObjectProperty<> ( this, "state" );
 
     private ItemManager itemManager;
 
@@ -33,7 +37,7 @@ public class Item
 
     public Item ()
     {
-        this.id.addListener ( new ChangeListener<String> () {
+    	this.id.addListener ( new ChangeListener<String> () {
 
             @Override
             public void changed ( final ObservableValue<? extends String> observable, final String oldValue, final String newValue )
@@ -43,16 +47,19 @@ public class Item
         } );
         this.observer = new Observer () {
 
+        	// Called when a value change is detected from the ItemManager
             @Override
             public void update ( final Observable o, final Object arg )
             {
-                updateState ( (DataItemValue)arg );
+                final DataItemValue value = (DataItemValue)arg;
+                final DataItemValueWrapper wrapper = new DataItemValueWrapper(value);
+            	updateState ( wrapper );
             }
         };
-        setState ( DataItemValue.DISCONNECTED );
+        setState ( new DataItemValueWrapper(DataItemValue.DISCONNECTED) );
     }
 
-    protected void updateState ( final DataItemValue value )
+    protected void updateState ( final IDataItemValue value )
     {
         Platform.runLater ( new Runnable () {
             @Override
@@ -70,17 +77,17 @@ public class Item
         } );
     }
 
-    public void setState ( final DataItemValue value )
+    public void setState ( final IDataItemValue value )
     {
         this.state.set ( value );
     }
 
-    public DataItemValue getState ()
+    public IDataItemValue getState ()
     {
         return this.state.get ();
     }
 
-    public ObjectProperty<DataItemValue> stateProperty ()
+    public ObjectProperty<IDataItemValue> stateProperty ()
     {
         return this.state;
     }
@@ -114,14 +121,17 @@ public class Item
         update ();
     }
 
-    public void write ( final Variant value )
+    @Override
+    public void write ( final Object value )
     {
         final String id = this.id.get ();
         if ( this.connection != null && id != null )
         {
-        	this.connection.startWrite(id, value, null, null);
+        	Variant variant = Variant.valueOf(value);
+        	this.connection.startWrite(id, variant, null, null);
         }
     }
+    
 
     private void update ()
     {
@@ -141,7 +151,9 @@ public class Item
         {
             this.item.unregister ();
             this.item = null;
-            updateState ( DataItemValue.DISCONNECTED );
+            updateState ( new DataItemValueWrapper(DataItemValue.DISCONNECTED) );
         }
     }
+
+	
 }

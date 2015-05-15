@@ -18,7 +18,7 @@
  * <http://opensource.org/licenses/lgpl-3.0.html> for a copy of the LGPLv3 License.
  */
 
-package com.antares.scada.demo.client.javafx;
+package com.antares.scada.demo.client.javafx.core;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;

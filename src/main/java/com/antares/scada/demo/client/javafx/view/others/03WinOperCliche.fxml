@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import jfxtras.labs.scene.control.gauge.linear.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.antares.scada.demo.client.javafx.Screen1Controller">
+   <children>
+    
+      
+      
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+         <children>
+            <GridPane layoutX="5.0" layoutY="8.0" prefHeight="30.0" prefWidth="1016.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="1025.0" text="OPERAÇÃO  DO CLICHE" />
+               </children>
+            </GridPane>
+            <Group>
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="652.0" prefHeight="61.0" prefWidth="420.0" styleClass="grid-pane">
+                     <children>
+                        <ToggleButton mnemonicParsing="false" prefHeight="61.0" prefWidth="144.0" styleClass="toggle-button-s2" text="MANUAL">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TB1111" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" prefHeight="61.0" prefWidth="140.0" selected="true" styleClass="toggle-button-s1" text="AUTOMATICO" toggleGroup="$TB1111" GridPane.columnIndex="2" />
+                        <SimpleMetroArcGauge maxValue="1.5" minValue="-0.5" prefHeight="61.0" prefWidth="135.0" styleClass="gauge-s1" value="1.0" GridPane.columnIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="139.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="140.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+      
+      
+                  <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="492.0" prefHeight="160.0" prefWidth="420.0" styleClass="grid-pane">
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-blue" text="LADO OPERADOR" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-grey" text="AMBOS" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-green" text="LADO MOTOR" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG --" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG --" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG --" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="462.0" prefHeight="30.0" prefWidth="420.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="550.0" text="CONJUNTO COR" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </Group>
+            <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="76.0" prefHeight="160.0" prefWidth="420.0" styleClass="grid-pane">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-blue" text="LADO OPERADOR" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-grey" text="AMBOS" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-green" text="LADO MAQUINA" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG --" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG --" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG --" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="46.0" prefHeight="30.0" prefWidth="420.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="550.0" text="ANILOX" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="46.0" prefHeight="30.0" prefWidth="458.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="550.0" text="CLICHE 1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="76.0" prefHeight="160.0" prefWidth="458.0" styleClass="grid-pane">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-blue" text="LADO OPERADOR" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-grey" text="AMBOS" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="182.0" styleClass="label-green" text="LADO MOTOR" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <HBox prefHeight="60.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="86.0" styleClass="button-s1" text="++" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" styleClass="button-s1" text="+" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="86.0" styleClass="button-s1" text="++" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" styleClass="button-s1" text="+" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="171.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="86.0" styleClass="button-s1" text="++" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" styleClass="button-s1" text="+" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="86.0" styleClass="button-s1" text="--" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" styleClass="button-s1" text="-" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="86.0" styleClass="button-s1" text="--" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" styleClass="button-s1" text="-" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="171.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="86.0" styleClass="button-s1" text="--" />
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" styleClass="button-s1" text="-" />
+                     </children>
+                  </HBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="236.0" prefHeight="61.0" prefWidth="420.0" styleClass="grid-pane">
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="61.0" prefWidth="144.0" styleClass="toggle-button-s2" text="REFERENCIAR">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="TB11111" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton mnemonicParsing="false" prefHeight="61.0" prefWidth="140.0" selected="true" styleClass="toggle-button-s1" text="FECHAR" toggleGroup="$TB11111" GridPane.columnIndex="2" />
+                  <SimpleMetroArcGauge maxValue="1.5" minValue="-0.5" prefHeight="61.0" prefWidth="135.0" styleClass="gauge-s1" value="1.0" GridPane.columnIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="139.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="140.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="236.0" prefHeight="61.0" prefWidth="458.0" styleClass="grid-pane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="417.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="162.0" styleClass="button-s1" text="POS. TROCA">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <Group>
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="449.0" prefHeight="153.0" prefWidth="280.0" styleClass="grid-pane">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="140.0" styleClass="label-blue" text="LADO OPERADOR" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="140.0" styleClass="label-green" text="LADO MOTOR" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="122.0" text="50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="122.0" text="50" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="122.0" text="50" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="122.0" text="50" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="272.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="411.0" prefHeight="40.0" prefWidth="280.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="279.0" text="CONJUNTO" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="601.0" prefHeight="56.0" prefWidth="354.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox prefHeight="56.0" prefWidth="339.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="56.0" prefWidth="168.0" text="SP VELOCIDADE (%)" wrapText="true" />
+                              <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="112.0" text="50" />
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="50.0" styleClass="button-s1" text="S-P" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </Group>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="337.0" prefHeight="56.0" prefWidth="420.0" styleClass="grid-pane">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="button-s1" text="JOG ++" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="122.0" text="50" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="307.0" prefHeight="30.0" prefWidth="420.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="550.0" text="REGISTRO" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="393.0" prefHeight="61.0" prefWidth="420.0" styleClass="grid-pane">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="55.0" prefWidth="162.0" styleClass="button-s1" text="POS. CENTRO" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="2.0" prefWidth="2.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" prefWidth="417.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="0.0" prefWidth="1.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="307.0" prefHeight="30.0" prefWidth="420.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="550.0" text="SERVO" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane gridLinesVisible="true" layoutX="521.0" layoutY="335.0" prefHeight="61.0" prefWidth="420.0" styleClass="grid-pane">
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="61.0" prefWidth="144.0" styleClass="toggle-button-s2" text="DESLIGADO">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="TB11112" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton mnemonicParsing="false" prefHeight="61.0" prefWidth="140.0" selected="true" styleClass="toggle-button-s1" text="LIGADO" toggleGroup="$TB11112" GridPane.columnIndex="2" />
+                  <SimpleMetroArcGauge maxValue="1.5" minValue="-0.5" prefHeight="61.0" prefWidth="135.0" styleClass="gauge-s1" value="1.0" GridPane.columnIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="139.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="140.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+<!--   
+###################			CONFIGUARCION MENU DE CONTROL  ############################################## 
+-->
+         <GridPane gridLinesVisible="true" layoutY="719.0" prefHeight="49.0" prefWidth="1000.0" styleClass="grid-pane">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                  <Button mnemonicParsing="false" onAction="#goToScreen1" prefHeight="40.0" prefWidth="94.0" text="Oper">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen2" prefHeight="40.0" prefWidth="94.0" text="Princ" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen3" prefHeight="40.0" prefWidth="94.0" text="Reg" GridPane.columnIndex="2">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                     </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen4" prefHeight="40.0" prefWidth="94.0" text="Cliche" GridPane.columnIndex="3">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen5" prefHeight="40.0" prefWidth="94.0" text="Est" GridPane.columnIndex="4">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen6" prefHeight="40.0" prefWidth="94.0" text="Man" GridPane.columnIndex="5">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen7" prefHeight="40.0" prefWidth="94.0" text="Lam" GridPane.columnIndex="6">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen8" prefHeight="40.0" prefWidth="94.0" text="Sen" GridPane.columnIndex="7">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen9" prefHeight="40.0" prefWidth="94.0" text="Temp" GridPane.columnIndex="8">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToScreen10" prefHeight="40.0" prefWidth="94.0" text="Setup" GridPane.columnIndex="9">
+                        <GridPane.margin>
+                           <Insets left="2.0" />
+                        </GridPane.margin>
+                  </Button>
+                    
+                  </children>
+            </GridPane>
+
+
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+                     
+         
+      </Pane>
+   </children>
+   
+</VBox>

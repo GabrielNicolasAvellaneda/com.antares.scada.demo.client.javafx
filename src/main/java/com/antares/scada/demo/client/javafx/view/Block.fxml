@@ -1,34 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.text.*?>
 <?import com.antares.scada.demo.client.javafx.ui.*?>
-<?import com.antares.scada.demo.client.javafx.*?>
-<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.GridPane?>
-<?import java.util.HashMap?>
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<?import com.antares.scada.demo.client.javafx.ui.ScadaButton?>
-?import com.antares.scada.demo.client.javafx.ui.ScadaControlState?>
-<?import com.antares.scada.demo.client.javafx.ui.ScadaLabel?>
-<?import com.antares.scada.demo.client.javafx.ui.ScadaTextField?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaButton ?>
 
-<VBox fx:id="root" prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.antares.scada.demo.client.javafx.WindowController">
-	<children>
-		<Label alignment="CENTER" prefHeight="80.0" prefWidth="1280.0" text="Screen Title">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-        <Pane>
-        	<children>
-        		<VBox layoutX="15.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="371.0">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="1280.0" text="Pane Title">
          <VBox.margin>
@@ -58,7 +38,7 @@
                   <Insets />
                </GridPane.margin>
                <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </Label>
             <Label contentDisplay="CENTER" prefHeight="40.0" prefWidth="1280.0" text="Row Title" GridPane.rowIndex="1">
@@ -78,47 +58,18 @@
             </ScadaButton>
             <TextField alignment="CENTER" prefHeight="40.0" prefWidth="1280.0" promptText="?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField alignment="CENTER" prefHeight="150.0" prefWidth="1280.0" promptText="?" GridPane.columnIndex="1" />
-            <ScadaTextField fx:id="speedField" prefHeight="40.0" prefWidth="1280.0" promptText="Speed Field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            
+            <TextField alignment="CENTER" prefHeight="40.0" prefWidth="1280.0" promptText="?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <ScadaButton mnemonicParsing="false" prefHeight="150.0" prefWidth="1280.0" text="ScadaButton" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </ScadaButton>
-            <ScadaButton mnemonicParsing="false" prefHeight="150.0" prefWidth="1280.0" text="ScadaButton" GridPane.columnIndex="2" GridPane.rowIndex="2" switchInputId="DEMO.INT_VAR1.X" inputSourceValue="${speedField.value}">
+            <ScadaButton mnemonicParsing="false" prefHeight="150.0" prefWidth="1280.0" text="ScadaButton" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
             </ScadaButton>
          </children>
       </GridPane>
    </children>
-</VBox> 
-      		<ScadaButton layoutX="492.0" layoutY="143.0" outputLensId="DEMO.INT_VAR1.X" prefHeight="46.0" prefWidth="141.0" switchInputId="DEMO.INT_VAR1.X" inputSourceValue="${controller.booleanTrue}" text="Decrement">
-      		 <states>
-	      		  <ScadaControlState name="state0" value="0">
-	      		  	<properties>
-	      		  		<FXCollections fx:factory="observableHashMap">
-	      		  			<text>This is state 0</text>
-      						<disable>false</disable>
-      					</FXCollections>
-      				</properties>
-         		  </ScadaControlState>
-	      		  <ScadaControlState name="state1" value="1">
-	      		  	<properties>
-	      		  		<FXCollections fx:factory="observableHashMap">
-       						<text>This is state 1</text>
-       						<styleClass>scada-button-state1</styleClass>
-       						<disable>true</disable>
-       					</FXCollections>
-       					</properties>
-  	      		  </ScadaControlState>
-     		 </states>
-     		 
-               <styleClass>
-                  <String fx:value="scada-button-state0" />
-                  <String fx:value="scada-button-alarm" />
-               </styleClass>
-      	 	</ScadaButton>
-        		
-        	</children>
-        </Pane>
-	</children>
 </VBox>

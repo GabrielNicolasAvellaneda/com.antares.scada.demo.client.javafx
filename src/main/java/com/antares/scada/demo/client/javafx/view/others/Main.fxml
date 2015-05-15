@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.GridPane?>
-<?import com.antares.scada.demo.client.javafx.Connection?>
-<?import com.antares.scada.demo.client.javafx.Item?>
+<!--<?import com.antares.scada.demo.client.javafx.Connection?>
+<?import com.antares.scada.demo.client.javafx.Item?>-->
+<?import com.antares.scada.demo.client.javafx.GaugeControl?>
+<?import com.antares.scada.demo.client.javafx.CopyOfGaugeControl?>
 <?import com.antares.scada.demo.client.javafx.NumericConverter?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Button?>
@@ -13,18 +15,21 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.BorderPane?>
-<?import com.antares.scada.demo.client.javafx.GaugeControl?>
 <?import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge?>
-<?import com.antares.scada.demo.client.javafx.ScadaButton ?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.antares.scada.demo.client.javafx.MainController">
+<VBox xmlns:fx="http://javafx.com/fxml">
 
 <stylesheets>
 <URL value="@../styles.css"/>
 </stylesheets>
-<fx:define>
+
+<!--<fx:define>
 	<Connection>
-		<connectionString>da:ngp://admin:admin12@antares-nb-100:2101</connectionString>
+		<connectionString>da:ngp://admin:admin12@localhost:2101</connectionString>
 		<items>
 			<Item fx:id="item1" id="COEX.STP_VEL_CA.X" onStateChange="print"/>
 			<Item fx:id="item2" id="COEX.STP_VEL_CB.X" onStateChange="print"/>
@@ -33,9 +38,9 @@
 		</items>
 	</Connection>
 </fx:define>
-
+-->
 <Text text="JavaFX Gauge Control" styleClass="title"/>
-<ScadaButton input="${item3}" text="This is a button" onAction="#test" />
+
 <GaugeControl input="${item1.state}">
 	<SimpleMetroArcGauge />
 </GaugeControl>
@@ -45,5 +50,10 @@
 <GaugeControl input="${item2.state}">
 	<SimpleMetroArcGauge />
 </GaugeControl>
-
+<GaugeControl input="${item3.state}">
+	<SimpleMetroArcGauge />
+</GaugeControl>
+<CopyOfGaugeControl input="${item3.state}">
+	<ProgressBar layoutX="316.0" layoutY="176.0"  rotate="90.0" />
+</CopyOfGaugeControl>
 </VBox>

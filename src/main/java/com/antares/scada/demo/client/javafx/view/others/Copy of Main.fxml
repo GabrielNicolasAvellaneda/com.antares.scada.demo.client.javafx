@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
+<?language javascript?>
+<?import java.lang.String?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import com.antares.scada.demo.client.javafx.Connection?>
+<?import com.antares.scada.demo.client.javafx.Item?> 
+
+<?import com.antares.scada.demo.client.javafx.ScadaTextFieldControl?>
+
+<VBox xmlns:fx="http://javafx.com/fxml">
+
+
+
+<stylesheets>
+<URL value="@../styles.css"/>
+</stylesheets>
+
+
+ 
+  <ScadaTextFieldControl input="${item1.state}">	
+  <TextField alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="156.0" text="40" />
+  </ScadaTextFieldControl>
+
+
+</VBox>

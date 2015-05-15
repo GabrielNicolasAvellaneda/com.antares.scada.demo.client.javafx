@@ -1,0 +1,57 @@
+.super-button {
+	
+	
+}
+
+.super-button-error {
+	
+	
+} 
+
+
+.scada-button {
+	-fx-background-color: green;
+	-fx-text-fill: #FFFFFF;
+}
+
+.scada-button-error {
+	-fx-background-color: red;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-weight: bold;
+	-fx-border-color: #00FF00;
+	-fx-border-width: 2;
+}
+
+.scada-button-alarm {
+	-fx-background-color: red;
+	-fx-text-fill: #FFFFFF;
+	-fx-underline: true;
+}
+
+.scada-button-warning {
+	-fx-background-color: yellow;
+	-fx-text-fill: #FFFFFF;
+}
+
+.scada-button-manual {
+	-fx-background-color: #28677E;
+	-fx-text-fill: #FFFFFF;
+}
+
+.scada-button-state0 {
+	-fx-background-color: #000000;
+	-fx-text-fill: #FFFFFF;
+}
+
+.scada-button-state1 {
+	-fx-background-color: #CCCCCC;
+	-fx-text-fill: #333333;
+	-fx-border-color: #00FF00;
+	-fx-border-width: 4;
+}
+
+.scada-button-customstate {
+	-fx-background-color: green;
+	-fx-text-fill: #FFFFFF;
+	-fx-font-weight: bold;
+}

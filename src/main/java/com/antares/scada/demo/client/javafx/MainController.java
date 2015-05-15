@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 
 import org.eclipse.scada.core.Variant;
 
+import com.antares.scada.demo.client.javafx.ui.ScadaButton;
+
 
 public class MainController implements Initializable {
 
@@ -24,7 +26,7 @@ public class MainController implements Initializable {
         ScadaButton button = (ScadaButton)event.getSource();
         Variant value = Variant.valueOf(17);
         
-        button.write(value);
+        //button.write(value);
     }
 	
 }

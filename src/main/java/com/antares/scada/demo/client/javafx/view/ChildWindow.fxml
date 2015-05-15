@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import com.antares.scada.demo.client.javafx.ScadaMomentaryButton?>
+<?import java.util.HashMap?>
+<?import java.lang.String?>
+<Label fx:id="myLabel2" Text="This is another label" prefHeight="35.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
