@@ -25,6 +25,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge;
 
 import com.antares.scada.demo.client.javafx.interfaces.IDataItem;
 import com.antares.scada.demo.client.javafx.interfaces.IDataItemValue;
@@ -36,7 +37,7 @@ import com.sun.javafx.collections.ObservableMapWrapper;
 import com.sun.javafx.fxml.BeanAdapter;
 
 @DefaultProperty("states")
-public class ScadaLabel extends Label implements IOutputLens
+public class ScadaGauge extends SimpleMetroArcGauge implements IOutputLens
 {
 	private final String styleClassPrefix = "scada-label";
 	
@@ -49,7 +50,7 @@ public class ScadaLabel extends Label implements IOutputLens
 
 	private ObjectProperty<Object> inputSourceValue = new SimpleObjectProperty<> ();
 		
-    public ScadaLabel() {
+    public ScadaGauge() {
     	super();
     	
     	this.getStyleClass().add("scada-label"); // initial style
@@ -135,7 +136,8 @@ public class ScadaLabel extends Label implements IOutputLens
 		updateStyles(newValue);
         updateStateProperties(newValue);
         if (newValue.getValue() != null) {
-        	this.setText(newValue.getValue().toString());	
+        	// TODO: Coerce the value always to double, add some validation. A cast is not safe.
+        	this.setValue((Double)newValue.getValue());	
         }
     }
 	

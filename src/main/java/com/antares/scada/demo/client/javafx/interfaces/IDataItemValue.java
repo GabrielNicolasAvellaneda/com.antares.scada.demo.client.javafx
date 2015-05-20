@@ -12,4 +12,11 @@ public interface IDataItemValue {
 	public Boolean isConnected();
 	public Object getValue();
 	public Calendar getTimestamp();
+	public boolean coerceEquals(Object value);
+	public boolean isBoolean();
+	public boolean isNull();
+	public boolean isString();
+	public boolean isDouble();
+	public boolean isLong();
+	public boolean isInteger();
 }

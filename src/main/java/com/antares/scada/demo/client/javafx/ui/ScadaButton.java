@@ -53,16 +53,6 @@ public class ScadaButton extends Button implements ISwitchInput, IOutputLens
     	
     	this.getStyleClass().add("scada-button"); // initial style
     	
-    	// Set the context to the item subscribed with the itemmanager.
-    	
-    	/*getOutputLensItem().getState().addListener ( new ChangeListener<IDataItemValue> () {
-
-            @Override
-            public void changed ( final ObservableValue<? extends IDataItemValue> observable, final IDataItemValue oldValue, final IDataItemValue newValue )
-            {
-                updateState ( newValue );
-            }});
-    	*/
     	// TODO: Place this in a behavior class.
     	this.setOnAction(new EventHandler<ActionEvent>() {
 			
@@ -168,17 +158,25 @@ public class ScadaButton extends Button implements ISwitchInput, IOutputLens
 			} else {
 				adapter.put(entry.getKey(), entry.getValue());	
 			}
-			
-			
 		}
 	}
 
 	private ScadaControlState getScadaControlState(IDataItemValue newValue) {
-
+		
+		if (newValue.getValue() == null) {
+			return null;
+		}
+		
 		for (ScadaControlState state : this.getStates()) {
-			if (newValue.getValue() != null && newValue.getValue().equals(state.getValue())) {
+			if (newValue.coerceEquals(state.getValue())) {
 				return state;
 			}
+			
+			/*Boolean booleanValue = (Boolean)newValue.getValue();
+			if (booleanValue.equals(Boolean.parseBoolean(state.getValue().toString()))) {
+				return state;
+			}*/
+
 		}
 		
 		return null;
@@ -248,6 +246,8 @@ public class ScadaButton extends Button implements ISwitchInput, IOutputLens
 			return;
 		}
 		
+		updateState(item.getState());
+		
 		item.stateProperty().addListener(new ChangeListener<IDataItemValue>() {
 
 			@Override
@@ -256,8 +256,6 @@ public class ScadaButton extends Button implements ISwitchInput, IOutputLens
 					IDataItemValue oldValue, IDataItemValue newValue) {
 
 				updateState(newValue);
-				//System.out.println("ScadaButton > Value Changed to " + newValue.getValue());
-				
 			}
 		});
 	}

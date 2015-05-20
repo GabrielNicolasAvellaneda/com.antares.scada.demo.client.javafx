@@ -25,7 +25,7 @@ public class Item implements IDataItem
 {
     private final StringProperty id = new SimpleStringProperty ( this, "id" );
 
-    private final ObjectProperty<IDataItemValue> state = new SimpleObjectProperty<> ( this, "state" );
+    private final ObjectProperty<IDataItemValue> state = new SimpleObjectProperty<IDataItemValue> ();
 
     private ItemManager itemManager;
 
@@ -51,8 +51,9 @@ public class Item implements IDataItem
             @Override
             public void update ( final Observable o, final Object arg )
             {
-                final DataItemValue value = (DataItemValue)arg;
-                final DataItemValueWrapper wrapper = new DataItemValueWrapper(value);
+            	final DataItemValue value = (DataItemValue)arg;
+                final IDataItemValue wrapper = new DataItemValueWrapper(value);
+                
             	updateState ( wrapper );
             }
         };
@@ -79,7 +80,9 @@ public class Item implements IDataItem
 
     public void setState ( final IDataItemValue value )
     {
-        this.state.set ( value );
+    	System.out.println("setState");
+    	
+    	this.state.set ( value );
     }
 
     public IDataItemValue getState ()
