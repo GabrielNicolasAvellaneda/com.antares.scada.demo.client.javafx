@@ -1,7 +1,3 @@
-.title {
-	-fx-font-size: 20pt;
-}
-
 .SimpleMetroArcGauge {
     /* These are the variables with their default values (colors), but they're just a mix of colors. Logic can be applied by assigning on of the colorschemes */    
     -fxx-segment0-color: #888888;

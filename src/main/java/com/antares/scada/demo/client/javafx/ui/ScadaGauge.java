@@ -45,6 +45,8 @@ public class ScadaGauge extends SimpleMetroArcGauge implements IOutputLens
 		@Override
 		public void changed(ObservableValue<? extends IDataItemValue> observable,
 				IDataItemValue oldValue, IDataItemValue newValue) {
+			
+			System.out.println("Changed!!!!");
 			// TODO Auto-generated method stub
 			if (newValue.getValue() != null) {
 				try {
@@ -60,14 +62,13 @@ public class ScadaGauge extends SimpleMetroArcGauge implements IOutputLens
 		
     public ScadaGauge() {
     	super();
+    	
+    	for (String string : this.getStyleClass()) {
+    		System.out.println(string);
+    	}
     }
     
-    private void updateStateInstance(final IDataItemValue newValue) {
-    	
-    	this.setValue((Double)newValue.getValue());
-    }
-	
-	/**
+    /**
      * OutputLensItem property
      */
     @Override
@@ -92,7 +93,7 @@ public class ScadaGauge extends SimpleMetroArcGauge implements IOutputLens
     }
     
     public void setOutputLensId(final String value) {
-    	this.outputLensBehaviour.getOutputLensId();
+    	this.outputLensBehaviour.setOutputLensId(value);
     }
     
     public StringProperty outputLensIdProperty() {

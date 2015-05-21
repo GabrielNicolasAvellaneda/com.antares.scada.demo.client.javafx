@@ -8,6 +8,7 @@
 <?import javafx.collections.FXCollections?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaButton?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaJogButton?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaGauge?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaControlState?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaLabel?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaTextField?>
@@ -16,7 +17,8 @@
 	<children>
       <VBox prefHeight="146.0" prefWidth="327.0">
 		    <children>
-		    <ScadaLabel text="test" outputLensId="DEMO.BOOLEAN_VAR1.X" />
+		    <ScadaGauge styleClass="scada-gauge" outputLensId="DEMO.INT_VAR1.X" />
+		    <ScadaLabel text="test" outputLensId="DEMO.INT_VAR1.X" />
 			<ScadaJogButton inputSourceValue="${controller.booleanFalse}" pressValue="${controller.booleanTrue}" layoutX="30.0" layoutY="27.0" outputLensId="DEMO.BOOLEAN_VAR1.X" prefHeight="25.0" prefWidth="112.0" switchInputId="DEMO.BOOLEAN_VAR1.X" text="Jog Button" />
 			
 			<ScadaTextField fx:id="testField" type="integer" />
