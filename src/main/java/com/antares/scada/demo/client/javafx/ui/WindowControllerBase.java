@@ -82,7 +82,7 @@ public class WindowControllerBase implements Initializable {
 				final String itemId = outputLens.getOutputLensId();
 				if (itemId != null) {
 					final Item item = getOrRegisterItem(itemId);
-					outputLens.setOutputLens(item);
+					outputLens.setOutputLensItem(item);
 				}
 			}
 			

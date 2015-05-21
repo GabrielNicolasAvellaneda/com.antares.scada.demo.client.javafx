@@ -1,13 +1,6 @@
-.super-button {
-	
-	
+.button {
+	-fx-underline: true;
 }
-
-.super-button-error {
-	
-	
-} 
-
 
 .scada-button {
 	-fx-background-color: green;
@@ -38,13 +31,13 @@
 	-fx-text-fill: #FFFFFF;
 }
 
-.scada-button-state0 {
+.scada-button-state-true {
 	-fx-background-color: #000000;
 	-fx-text-fill: #FFFFFF;
 }
 
-.scada-button-state1 {
-	-fx-background-color: #CCCCCC;
+.scada-button-state-false {
+	-fx-background-color: #00ff00;
 	-fx-text-fill: #333333;
 	-fx-border-color: #00FF00;
 	-fx-border-width: 4;
