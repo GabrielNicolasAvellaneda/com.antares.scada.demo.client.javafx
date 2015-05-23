@@ -40,18 +40,19 @@ import com.sun.javafx.fxml.BeanAdapter;
 @DefaultProperty("states")
 public class ScadaGauge extends SimpleMetroArcGauge implements IOutputLens
 {
+	private static final String DEFAULT_STYLE_CLASS = "scada-gauge";
+	
 	private final OutputLensBehaviour outputLensBehaviour = new OutputLensBehaviour(this, "scada-gauge", new ChangeListener<IDataItemValue>() {
 		
 		@Override
 		public void changed(ObservableValue<? extends IDataItemValue> observable,
 				IDataItemValue oldValue, IDataItemValue newValue) {
-			
-			System.out.println("Changed!!!!");
-			// TODO Auto-generated method stub
 			if (newValue.getValue() != null) {
 				try {
-					Double value = (Double)newValue.getValue();
-					ScadaGauge.this.setValue(value);
+					if (newValue.isDouble() || newValue.isBoolean() || newValue.isInteger()) {
+						Double value = (Double)newValue.getValueAsDouble();
+						ScadaGauge.this.setValue(value);
+					}
 				}
 				catch (Exception e) {
 					e.printStackTrace();
@@ -63,9 +64,7 @@ public class ScadaGauge extends SimpleMetroArcGauge implements IOutputLens
     public ScadaGauge() {
     	super();
     	
-    	for (String string : this.getStyleClass()) {
-    		System.out.println(string);
-    	}
+    	this.getStyleClass().setAll(DEFAULT_STYLE_CLASS);
     }
     
     /**

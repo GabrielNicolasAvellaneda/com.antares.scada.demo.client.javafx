@@ -23,6 +23,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TouchEvent;
@@ -58,6 +59,8 @@ public class ScadaButton extends Button implements ISwitchInput, IOutputLens
 		
     public ScadaButton() {
     	super();
+    	
+    	this.setCursor(Cursor.HAND);
     	
     	this.getStyleClass().add("scada-button"); // initial style
     	

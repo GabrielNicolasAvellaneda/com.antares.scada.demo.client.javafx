@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.controlsfx.control.PopOver;
+import org.controlsfx.control.PopOver.ArrowLocation;
 import org.eclipse.scada.core.Variant;
 
 import javafx.beans.DefaultProperty;
@@ -22,6 +24,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -39,6 +42,21 @@ import com.sun.javafx.fxml.BeanAdapter;
 @DefaultProperty("states")
 public class ScadaLabel extends Label implements IOutputLens
 {
+	private ObjectProperty<ScadaKeypad> keypad = new SimpleObjectProperty<ScadaKeypad>();
+	
+	private PopOver popOver = null;
+	
+	public ObjectProperty<ScadaKeypad> keypadProperty() {
+		return this.keypad;
+	}
+	
+	public void setKeypad(final ScadaKeypad value) {
+		this.keypad.set(value);
+	}
+	
+	public ScadaKeypad getKeypad() {
+		return this.keypad.get();
+	}
 	
 	private final OutputLensBehaviour outputLensBehaviour = new OutputLensBehaviour(this, "scada-label", new ChangeListener<IDataItemValue>() {
 
@@ -58,6 +76,36 @@ public class ScadaLabel extends Label implements IOutputLens
 	
     public ScadaLabel() {
     	super();
+    	
+    	this.setOnMousePressed(new EventHandler<Event>() {
+
+			@Override
+			public void handle(Event event) {
+				if (popOver != null) {
+					if (popOver.isShowing()) {
+						popOver.hide();
+					} else {
+						popOver.show(ScadaLabel.this);
+					}
+				} else {
+					popOver = createPopOver();
+					popOver.show(ScadaLabel.this);
+				}
+			}
+
+			private PopOver createPopOver() {
+				 PopOver popOver = new PopOver(ScadaLabel.this.getKeypad());
+				 ScadaLabel.this.getKeypad().setVisible(true);
+			        popOver.setDetachable(true);
+			        popOver.setDetached(true);
+			        popOver.setDetachedTitle("Keypad");
+			        popOver.setCornerRadius(0);
+			        //popOver.setArrowLocation(ArrowLocation.TOP_LEFT);
+
+			        return popOver;
+			}
+		});
+    	
    }
     
     public String styleClassPrefixProperty() {

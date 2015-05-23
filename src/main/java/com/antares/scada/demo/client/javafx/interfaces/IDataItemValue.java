@@ -2,6 +2,9 @@ package com.antares.scada.demo.client.javafx.interfaces;
 
 import java.util.Calendar;
 
+import org.eclipse.scada.core.NotConvertableException;
+import org.eclipse.scada.core.NullValueException;
+
 public interface IDataItemValue {
 
 	public Boolean isAlarm();
@@ -19,4 +22,6 @@ public interface IDataItemValue {
 	public boolean isDouble();
 	public boolean isLong();
 	public boolean isInteger();
+	public Double getValueAsDouble() throws NullValueException, NotConvertableException;
+	public int  getValueAsInteger() throws NullValueException, NotConvertableException;
 }

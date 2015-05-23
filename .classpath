@@ -37,5 +37,9 @@
 	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-common/8.0-r4-SNAPSHOT/jfxtras-common-8.0-r4-SNAPSHOT.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-fxml/8.0-r4-SNAPSHOT/jfxtras-fxml-8.0-r4-SNAPSHOT.jar"/>
 	<classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/controlsfx-8.20.8.jar"/>
+	<classpathentry kind="lib" path="lib/controlsfx-samples-8.20.8.jar"/>
+	<classpathentry kind="lib" path="lib/fxsampler-1.0.8.jar"/>
+	<classpathentry kind="lib" path="lib/openjfx-dialogs-1.0.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

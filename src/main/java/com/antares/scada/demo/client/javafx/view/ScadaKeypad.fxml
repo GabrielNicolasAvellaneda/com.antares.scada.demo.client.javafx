@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import com.antares.scada.demo.client.javafx.ui.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaButton ?>
+<?import com.antares.scada.demo.client.javafx.ui.ScadaTextField ?>
+
+<fx:root type="javafx.scene.layout.Pane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+             <GridPane vgap="5.0" hgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+               	  <ScadaTextField fx:id="textField" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="90.0" text="${controller.value}" type="integer" GridPane.columnSpan="3" />
+                  <Button mnemonicParsing="false" onAction="#button1Action" prefHeight="150.0" prefWidth="1280.0" text="1" GridPane.rowIndex="1" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button2Action" prefHeight="640.0" prefWidth="1280.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#button3Action" prefHeight="640.0" prefWidth="1280.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button4Action" prefHeight="640.0" prefWidth="1280.0" text="4" GridPane.rowIndex="2" />
+                  <Button layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#button5Action" prefHeight="640.0" prefWidth="1280.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button layoutX="110.0" layoutY="40.0" mnemonicParsing="false" onAction="#button6Action" prefHeight="640.0" prefWidth="1280.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button7Action" prefHeight="640.0" prefWidth="1280.0" text="7" GridPane.rowIndex="3" />
+                  <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#button8Action" prefHeight="640.0" prefWidth="1280.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button9Action" prefHeight="640.0" prefWidth="1280.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button layoutX="110.0" layoutY="70.0" mnemonicParsing="false" onAction="#button0Action" prefHeight="640.0" prefWidth="1280.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button layoutX="220.0" layoutY="55.0" mnemonicParsing="false" onAction="#buttonIncrement" prefHeight="640.0" prefWidth="1280.0" text="INC" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button layoutX="325.0" layoutY="55.0" mnemonicParsing="false" onAction="#buttonDecrement" prefHeight="640.0" prefWidth="1280.0" text="DEC" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ScadaButton fx:id="buttonEnter" inputSourceValue="${textField.value}" layoutX="325.0" layoutY="90.0" mnemonicParsing="false" prefHeight="640.0" prefWidth="1280.0" text="ENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+                  <Button layoutX="325.0" layoutY="125.0" mnemonicParsing="false" prefHeight="640.0" prefWidth="1280.0" text="CANCEL" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button layoutX="325.0" layoutY="55.0" mnemonicParsing="false" onAction="#buttonClear" prefHeight="640.0" prefWidth="1280.0" text="CLEAR" GridPane.columnIndex="3" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               </GridPane>
+</fx:root>

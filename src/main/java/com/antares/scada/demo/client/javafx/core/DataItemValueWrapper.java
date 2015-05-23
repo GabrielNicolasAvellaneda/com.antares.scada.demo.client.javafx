@@ -144,5 +144,16 @@ public class DataItemValueWrapper implements IDataItemValue {
 	public Calendar getTimestamp() {
 		return dataItemValue.getTimestamp();
 	}
+
+	@Override
+	public Double getValueAsDouble() throws NullValueException, NotConvertableException {
+		return dataItemValue.getValue().asDouble();
+	}
+
+	@Override
+	public int getValueAsInteger() throws NullValueException,
+			NotConvertableException {
+		return dataItemValue.getValue().asInteger();
+	}
 	
 }
