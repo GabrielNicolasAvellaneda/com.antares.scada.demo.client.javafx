@@ -18,7 +18,13 @@
 			<enabled>true</enabled>
 		</snapshots>
 	</repository>
+	
 	<repository>
+	<id>eclipse.scada</id>
+	<url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.2.1/R201505080532/maven</url>
+	</repository>
+	
+	<!-- <repository>
 		<id>eclipse.scada</id>
 		<url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/maven/</url>
 		<releases>
@@ -28,6 +34,7 @@
 			<enabled>true</enabled>
 		</snapshots>
 	</repository>
+	 -->
 </repositories>
   
 <build>
@@ -51,17 +58,17 @@
 </build>
  
   <dependencies>
-    <dependency>
+    <!--<dependency>
 			<groupId>org.eclipse.scada.core</groupId>
 			<artifactId>org.eclipse.scada.da.client</artifactId>
-			<version>[0.2.0,)</version>
+			<version>[0.2.1,)</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.eclipse.scada.core</groupId>
 			<artifactId>org.eclipse.scada.da.client.ngp</artifactId>
-			<version>[0.2.0,)</version>
-		</dependency>
+			<version>[0.2.1,)</version>
+		</dependency>  -->
     <dependency>
       <groupId>org.jfxtras</groupId>
       <artifactId>jfxtras-labs</artifactId>

@@ -14,16 +14,12 @@
 <?import com.antares.scada.demo.client.javafx.ui.ScadaLabel?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaTextField?>
 <?import com.antares.scada.demo.client.javafx.ui.ScadaKeypad?>
+
 <VBox fx:id="root" prefHeight="466.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.antares.scada.demo.client.javafx.Window2Controller">
 	<children>
-      <VBox prefHeight="146.0" prefWidth="327.0">
-		    <children>
-		    <ScadaLabel outputLensId="DEMO.INT_VAR1.X" text="test" keypad="${myKeypad}" />
-		    <ScadaKeypad visible="false" fx:id="myKeypad" switchInputId="DEMO.INT_VAR1.X" />
-		    <ScadaGauge outputLensId="DEMO.INT_VAR1.X" styleClass="scada-gauge" />
-			<ScadaJogButton inputSourceValue="${controller.booleanFalse}" layoutX="30.0" layoutY="27.0" outputLensId="DEMO.BOOLEAN_VAR1.X" prefHeight="25.0" prefWidth="112.0" pressValue="${controller.booleanTrue}" switchInputId="DEMO.BOOLEAN_VAR1.X" text="Jog Button" />
-			<ScadaTextField fx:id="testField" type="integer" />
-     		<ScadaButton inputSourceValue="${testField.value}" layoutX="30.0" layoutY="27.0" outputLensId="DEMO.BOOLEAN_VAR1.X" prefHeight="25.0" prefWidth="112.0" switchInputId="DEMO.INT_VAR1.X" text="Default Text">
+		    <ScadaKeypad fx:id="myKeypad" switchInputId="DEMO.INT_VAR1.X" visible="false" />
+		    <ScadaLabel keypad="${myKeypad}" outputLensId="DEMO.INT_VAR1.X" text="test" />
+		<ScadaButton inputSourceValue="${testField.value}" layoutX="30.0" layoutY="27.0" outputLensId="DEMO.BOOLEAN_VAR1.X" prefHeight="25.0" prefWidth="112.0" switchInputId="DEMO.INT_VAR1.X" text="Default Text">
 				<states>
 					<ScadaControlState name="TRUE_STATE" value="true">
 						<properties>
@@ -43,13 +39,9 @@
 					</ScadaControlState>
 				</states>
 			</ScadaButton>
-         </children>
-      </VBox>
-      <Pane prefHeight="304.0" prefWidth="336.0">
-         <children>
-
-         </children>
-      </Pane>
+		    <ScadaGauge minHeight="200.0" minWidth="200.0" outputLensId="DEMO.INT_VAR1.X" prefHeight="400.0" prefWidth="400.0" styleClass="scada-gauge" />
+			<ScadaTextField fx:id="testField" type="integer" />
+			<ScadaJogButton inputSourceValue="${controller.booleanFalse}" layoutX="30.0" layoutY="27.0" outputLensId="DEMO.BOOLEAN_VAR1.X" prefHeight="25.0" prefWidth="112.0" pressValue="${controller.booleanTrue}" switchInputId="DEMO.BOOLEAN_VAR1.X" text="Jog Button" />
 	</children>
 
 </VBox>

@@ -178,7 +178,9 @@ public class ScadaKeypad extends Pane implements ISwitchInput {
 						IDataItemValue oldValue, IDataItemValue newValue) {
 
 					try {
-						ScadaKeypad.this.keypad.setValue(newValue.getValueAsInteger());
+						if (newValue.getValue() != null) {
+							ScadaKeypad.this.keypad.setValue(newValue.getValueAsInteger());	
+						}
 					} catch (NullValueException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

@@ -14,6 +14,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.scene.control.Control;
+import javafx.scene.layout.Region;
 
 import com.antares.scada.demo.client.javafx.interfaces.IDataItem;
 import com.antares.scada.demo.client.javafx.interfaces.IDataItemValue;
@@ -26,12 +27,12 @@ public class OutputLensBehaviour implements IOutputLens {
 	private final StringProperty outputLensId = new SimpleStringProperty();
 	private final ObjectProperty<IDataItem> outputLensItem = new SimpleObjectProperty<> ();
 	private ObservableList<ScadaControlState> states = FXCollections.observableArrayList();
-	private Control control = null;
+	private Region control = null;
 	private String styleClassPrefix = "scada-button";
 	private List<String> defaultStyles = FXCollections.observableArrayList();
 	private ChangeListener<IDataItemValue> stateChangeHandler = null; 
 	
-	public OutputLensBehaviour(Control control, final String styleClassPrefix, ChangeListener<IDataItemValue> stateChangeHandler) {
+	public OutputLensBehaviour(Region control, final String styleClassPrefix, ChangeListener<IDataItemValue> stateChangeHandler) {
 		this.control = control;
 		this.styleClassPrefix = styleClassPrefix;
 		this.stateChangeHandler = stateChangeHandler;

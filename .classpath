@@ -32,7 +32,11 @@
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.client.ngp/0.2.0/org.eclipse.scada.core.client.ngp-0.2.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.client.common/0.2.0/org.eclipse.scada.core.client.common-0.2.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/eclipse/scada/core/org.eclipse.scada.core.ngp/0.1.0/org.eclipse.scada.core.ngp-0.1.0.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-labs/8.0-r4-SNAPSHOT/jfxtras-labs-8.0-r4-SNAPSHOT.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-labs/8.0-r4-SNAPSHOT/jfxtras-labs-8.0-r4-SNAPSHOT.jar" sourcepath="/M2_REPO/org/jfxtras/jfxtras-labs/8.0-r4-SNAPSHOT/jfxtras-labs-8.0-r4-SNAPSHOT.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/c:/Users/developer/.m2/repository/org/jfxtras/jfxtras-controls/8.0-r4-SNAPSHOT/jfxtras-controls-8.0-r4-SNAPSHOT-sources.jar%20!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-controls/8.0-r4-SNAPSHOT/jfxtras-controls-8.0-r4-SNAPSHOT.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-common/8.0-r4-SNAPSHOT/jfxtras-common-8.0-r4-SNAPSHOT.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/jfxtras/jfxtras-fxml/8.0-r4-SNAPSHOT/jfxtras-fxml-8.0-r4-SNAPSHOT.jar"/>
